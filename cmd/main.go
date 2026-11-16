@@ -7,19 +7,17 @@ import (
 	"strings"
 )
 
-func main(){
+func main() {
 	reader := bufio.NewReader(os.Stdin)
-	fmt.Print("Enter your prompt: ")
+	fmt.Print("please enter a prompt: ")
 
 	input, err := reader.ReadString('\n')
 	if err != nil {
-		fmt.Println("Error reading input")
+		fmt.Print("Error capturing input")
 		return
 	}
 
 	prompt := strings.TrimSpace(input)
 
-	fmt.Println("you typed:", prompt)
-
-
+	fmt.Println(prompt)
 }
