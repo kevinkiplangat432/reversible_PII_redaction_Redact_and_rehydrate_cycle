@@ -1,23 +1,12 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"os"
-	"strings"
+
+	"github.com/kevinkiplangat432/arvis_v1/internal/greetings"
 )
 
 func main() {
-	reader := bufio.NewReader(os.Stdin)
-	fmt.Print("please enter a prompt: ")
-
-	input, err := reader.ReadString('\n')
-	if err != nil {
-		fmt.Print("Error capturing input")
-		return
-	}
-
-	prompt := strings.TrimSpace(input)
-
-	fmt.Println(prompt)
+	message := greetings.Hello("kevin")
+	fmt.Println(message)
 }
